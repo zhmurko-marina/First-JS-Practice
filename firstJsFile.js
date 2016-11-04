@@ -2,7 +2,7 @@
  * Created by Marina on 22.10.2016.
  */
 
-var array = [1, NaN, 3, 5, -3];
+var array = [1, undefined, 3, 5, -3];
 /*
     [3, 0, -5, 1, 44, -12, 3, 0, 0, 1, 2, -3, -3, 2, 1, 4, -2 - 3 - 1]
     [-1, -8, -2]
@@ -17,10 +17,7 @@ var sum = 0,
     i;
 
 for (i = 0; i < n; i++) {
-    if (array[i] == undefined || isNaN(array[i]) == true) {
-        sum += 0;
-    }
-    else {
+    if (array[i] != undefined && !isNaN(array[i])) {
         sum += array[i];
     }
 }
